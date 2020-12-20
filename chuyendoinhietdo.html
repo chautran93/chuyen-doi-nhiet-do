@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+    <p>Type a value in the Farhenrheit field to convert the value to Celcius:</p>
+    <p>Farhenrheit: <input type="number" name="" id="numbers" onchange="change();"></p>
+    <div id="result"></div>
+    
+    <script>
+        function change(){
+            let enternumber = document.getElementById('numbers').value;
+            enternumber = parseInt(enternumber);
+            // console.log (enternumber);
+            let doC;
+            doC = ((enternumber)-32)/1.8;
+            
+        //    console.log (doC);
+        let e = "<hr/>";
+        document.getElementById('result').innerHTML = e + 'Celcius:' + '&nbsp' + doC;
+        }
+        
+       
+    </script>
+</body>
+</html>
